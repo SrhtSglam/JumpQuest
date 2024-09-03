@@ -10,11 +10,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        coinAmount = 0;
+        coinAmount = PlayerPrefs.GetInt("CoinValue", 0);
     }
 
     private void Update()
     {
         text.GetComponent<TextMeshProUGUI>().text = "Coin: " + coinAmount.ToString();
+        PlayerPrefs.SetInt("CoinValue", coinAmount);
     }
 }
