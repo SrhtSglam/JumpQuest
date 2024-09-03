@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class MapCreator : MonoBehaviour
 {
-    [SerializeField] GameObject platform;
+    [SerializeField] GameObject platform, coin;
 
     private void Awake()
     {
-        float x = platform.transform.position.x;
-        float y = platform.transform.position.y;
-        for(int i = 0; i < 30; i++) 
+        float grassX = platform.transform.position.x;
+        float grassY = platform.transform.position.y;
+        float coinX = coin.transform.position.x;
+        float coinY = coin.transform.position.y;
+        for(int i = 0; i < 50; i++) 
         {
-            x += 1;
-            Instantiate(platform, new Vector2(x,y), Quaternion.identity);
+            grassX += 1;
+            Instantiate(platform, new Vector2(grassX,grassY), Quaternion.identity);
+            if(i > 15)
+            {
+                coinX += 3;
+                Instantiate(coin, new Vector2(coinX, coinY), Quaternion.identity);
+            }
         }
     }
 }

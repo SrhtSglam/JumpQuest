@@ -6,13 +6,6 @@ public class EnemyScript : MonoBehaviour
 {
     [SerializeField] GameObject leftConditionBlock, rightConditionBlock;
     bool condition;
-    Rigidbody2D rb;
-    float speed = 2f; 
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
     private void Update()
     {
