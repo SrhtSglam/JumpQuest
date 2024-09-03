@@ -18,11 +18,11 @@ public class EnemyScript : MonoBehaviour
     {
         if (condition == true)
         {
-            transform.position = new Vector2(transform.position.x + 0.05f, transform.position.y);
+            transform.position = new Vector2(transform.position.x + 0.02f, transform.position.y);
         }
         else if(condition == false)
         {
-            transform.position = new Vector2(transform.position.x - 0.05f, transform.position.y);
+            transform.position = new Vector2(transform.position.x - 0.02f, transform.position.y);
         }
     }
 
